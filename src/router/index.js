@@ -1,16 +1,16 @@
-import VueRouter from 'vue-router'
-import Login from "../views/Login.vue"
+import { createRouter, createWebHistory } from 'vue-router'
+import Login from "../views/LoginScreen.vue"
 
-routes = [
+let routes = [
     {
         path: "/login",
         component: Login
     }
 ]
 
-const router = VueRouter.createRouter({
-    history: "",
+const router = createRouter({
+    history: createWebHistory(),
     routes
 })
 
-exports.router = router;
+export default router;
